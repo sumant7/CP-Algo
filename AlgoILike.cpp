@@ -12,7 +12,7 @@ int digitsInFactorial(int N)
 
     
 //to search a number in an array with O(logN) complexity
-int binarysearch(int a[], int n, int k)
+int binarysearch(int a[], int n, int k)    //k is the number to search
 {
         int l=0,r=n-1,mid;
         while(r>=l)
@@ -33,6 +33,7 @@ int binarysearch(int a[], int n, int k)
         }
     return -1;
     }
+
 
 
 //to find minimum no.of swaps to sort an array
@@ -122,4 +123,19 @@ for(i=1;i<=sqrt(m);++i)
 }
 
 
+
+
+//to put all negative numbers on left in an array
+//time O(n), space O(1)
+void rearrange(int arr[], int n)     //n is size of arr
+{
+    int j = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] < 0) {
+            if (i != j)
+                swap(arr[i], arr[j]);
+            j++;
+        }
+    }
+}
 
