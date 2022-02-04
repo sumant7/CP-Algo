@@ -1,15 +1,15 @@
-//to find digits int the factorial of a number
-int digitsInFactorial(int N)
-    {
-        double ans=0;
-        for(int i=2;i<=N;++i)
-        {
-            ans = ans + log10(i);
-        }
-        return ceil(ans);
-    }
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <cstring>
+#include <vector>
+#include <map>
+#include <unordered_map>
+#include <set>
+#include <unordered_set>
+#include <list>
 
-
+using namespace std;
     
 //to search a number in an array with O(logN) complexity
 int binarysearch(int a[], int n, int k)    //k is the number to search
@@ -82,60 +82,10 @@ int minSwaps(int arr[], int n)
 
 
 
-//lcm
-int gcd(int a, int b)
-{
-    // Everything divides 0
-    if (a == 0)
-       return b;
-    if (b == 0)
-       return a;
-  
-    // base case
-    if (a == b)
-        return a;
-  
-    // a is greater
-    if (a > b)
-        return gcd(a-b, b);
-    return gcd(a, b-a);
-}
 
 
 
 
 
 
-//no.of factors of a number
-for(i=1;i<=sqrt(m);++i)
-{
-    if(m%i==0)
-    {
-        if(m/i==i)
-        {
-            count++;
-        }
-        else
-        {
-            count=count+2;
-        }
-    }
-}
-
-
-
-
-//to put all negative numbers on left in an array
-//time O(n), space O(1)
-void rearrange(int arr[], int n)     //n is size of arr
-{
-    int j = 0;
-    for (int i = 0; i < n; i++) {
-        if (arr[i] < 0) {
-            if (i != j)
-                swap(arr[i], arr[j]);
-            j++;
-        }
-    }
-}
 
