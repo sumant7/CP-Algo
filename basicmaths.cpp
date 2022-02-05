@@ -103,3 +103,9 @@ int minv(int m,int a)
 
 
 // sum of all proper divisiors of n= (sum of reciprocal of all proper divisors)*n
+
+
+
+/*if we have 2 numbers a and b
+let z= a + (b*n)   now   z%n=a and z/n=b
+*/
