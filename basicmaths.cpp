@@ -77,7 +77,7 @@ int gcd(int a, int b)
 }
 
 // lcm(a,b)*gcd(a,b)=a*b
-
+//or simply use __gcd(a,b)  STL function 
 
 
 
