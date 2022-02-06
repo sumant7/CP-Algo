@@ -36,6 +36,19 @@ int binarysearch(int a[], int n, int k)    //k is the number to search
 
 
 
+//find sqaure root with precision
+double bsqrt(int key){
+	double l=0,r=key;   //l=left and r=right
+	double mid= l+ (r-l)/2,p=0.01;   //p is precision with which we need to find
+	while((r-l)>p){
+		mid = l+ (r-l)/2;
+		if(mid*mid<key)    l=mid;
+		else r=key;
+	}
+	return mid;
+}
+
+
 //to find minimum no.of swaps to sort an array
 int minSwaps(int arr[], int n)
 {
@@ -43,8 +56,8 @@ int minSwaps(int arr[], int n)
 	pair<int, int> arrPos[n];
 	for (int i = 0; i < n; i++)
 	{
-		arrPos[i].first = arr[i];
-		arrPos[i].second = i;
+		arrPos[i].first = arr[i];     //storing original array
+		arrPos[i].second = i;    //original index
 	}
 
 	// Sort the array by array element values to get right position of every element as second element of pair.
@@ -57,16 +70,16 @@ int minSwaps(int arr[], int n)
 	for (int i = 0; i < n; i++)
 	{
 		// already swapped and corrected or already present at correct pos
-		if (vis[i] || arrPos[i].second == i)
+		if (vis[i] || arrPos[i].second == i)      //vis[i] is already swapped and  arrPos[i].second == i already at correct position
 			continue;
         // find out the number of node in this cycle and add in ans
 		int cycle_size = 0;
 		int j = i;
 		while (!vis[j])
 		{
-			vis[j] = 1;
+			vis[j] = 1;    //already swapped
             // move to next node
-			j = arrPos[j].second;
+			j = arrPos[j].second;   //j is sorted position  and arrPos[j].second is original position
 			cycle_size++;
 		}
         // Update answer by adding current cycle.

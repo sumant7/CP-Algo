@@ -83,3 +83,20 @@ void merge_sorted(int arr1[],int arr2[],int m, int n)     //O(m+n)
         j++;
     }
 }
+
+
+
+
+//rearrange an array such that a[i]=a[a[i]] without extra space
+void rearr(int a[],int n)
+{
+    int i;
+    for(i=0;i<n;++i)    // a=> a+ b*n     a=a[i]    b=a[a[i]]
+    {
+        a[i]= a[i]%n + (a[a[i]%n]%n)*n;       //%n is neccesary beacuse this a[i] will get changed and later in the loop we need original a[i] yo convert some other a[i]
+    }
+    for(i=0;i<n;++i)
+    {
+        a[i]= a[i]/n;   // (a+b*n)/n = b
+    }
+}
