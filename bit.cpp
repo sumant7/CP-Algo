@@ -46,3 +46,26 @@ n= n & (1<<i)
 //toggle ith bit
 n= n ^ (1<<i)
 */
+
+
+
+
+//fint sum of all xor pairs in an array
+/*
+Consider ith bit is set in m out of n numbers.Then we can say that ith bit will be set in m*(n-m) pairwise XORs.So the final sum due to this ith bit will be 2^i*m*(n-m) (conversion of binary number to decimal)
+*/
+
+long long int sum(int a[],int n)
+{
+    long long int ans=0;
+    for(int i=0;i<32;++i)  //integers are 32 bit numbers
+    {
+        int count=0;
+        for(int j=0;j<n;++j)
+        {
+            if(a[j]&(1<<i)!=0)  count++;
+        }
+        ans=ans+ (1<<i)*count*(n-count);
+    }
+    return ans;
+}
