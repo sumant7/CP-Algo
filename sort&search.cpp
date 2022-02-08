@@ -94,7 +94,24 @@ int minSwaps(int arr[], int n)
 
 
 
+//sorting with cmp function
+//Given a vector of string, Sort the vector elements on the basis of size of strings in descending order. If sizes are equal, sort them in lexicographically smallest order
 
+/*
+bool cmp(string a, string b)
+{
+    if(a.size()!=b.size())  return(a.size()>b.size());     //for descending order of size
+    else return a<b;    //lexiographically inceasing
+}
+int main(){
+    vector<string> v={"abc", "o", "tdc", "zx", "d", "za"};
+    sort(v.begin(),v.end(),cmp);
+    for(int i=0;i<v.size();++i)
+    {
+        cout<<v[i]<<" ";
+    }
+}
+*/
 
 
 
