@@ -109,3 +109,23 @@ int minv(int m,int a)
 /*if we have 2 numbers a and b
 let z= a + (b*n)   now   z%n=a and z/n=b    #a should be greater than n
 */
+
+
+
+
+//Sieve of Ertosthenes
+// no.of prime numbers less than a number
+
+
+vector<int> chechprime(int n){
+    vector<bool> prime(n+1,true);  // all values are true
+    for(int p=2;p*p<=n;++p){
+        if(prime[p]==true)
+        {
+            for(int=p*p;i<=n;i=i+p)
+            {
+                prime[i]=false;    //if 2 is prime then 4,6,8,10 can't be prime
+            }
+        }
+    }
+}
