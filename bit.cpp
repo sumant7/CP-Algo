@@ -82,3 +82,18 @@ All the elements are integers and we know that size of int is 32 bits, so if
 we do the above for all the bits 0<=i<32 and sum all the results we will
 have our final answer.
 */
+
+
+
+
+//to calculate position of most significant bit
+long long int msbPos(long long  n)
+{
+    long long int msb_p = -1;
+    while (n)
+    {
+        n = n>>1;
+        msb_p++;
+    }
+    return msb_p;
+}
