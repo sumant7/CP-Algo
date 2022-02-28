@@ -122,10 +122,38 @@ vector<int> chechprime(int n){
     for(int p=2;p*p<=n;++p){
         if(prime[p]==true)
         {
-            for(int=p*p;i<=n;i=i+p)
+            for(int i= p*p; i<=n;i=i+p)
             {
                 prime[i]=false;    //if 2 is prime then 4,6,8,10 can't be prime
             }
         }
     }
 }
+
+
+
+
+
+//binary exponentiation to calculate a^n in O(logn)  using bits
+/*
+13= 1101 in binary
+3^13 = 3^8 * 3^4 * 3^1
+it follows
+       1   if n=0
+a^n=   a^(n/2) * a^(n/2)    if n%2==0
+       a^((n-1)/2) * a^((n-1)/2) * a    if n%2==1
+*/
+
+long long binpow(long long a, long long b) {
+    long long res = 1;
+    while (b > 0) {
+        if (b & 1)  //if b is odd
+            res = res * a;
+        a = a * a;
+        b >>= 1;
+    }
+    return res;
+}
+
+
+
