@@ -18,10 +18,11 @@ x>>n  is basically x= x/2^n;
 x<<n  is basically x= x*2^n;
 */
 
-//properties
+//properties ot bit operations
 /*
 a&b<= min(a,b)
 a|b>= max(a,b)
+a + b = a|b + a&b
 a|b|c|d= d|a|c|a
 0^a= a            a^a=0
 odd number & 1=1   even&1=0
