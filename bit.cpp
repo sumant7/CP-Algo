@@ -27,6 +27,8 @@ a|b|c|d= d|a|c|a
 0^a= a            a^a=0
 if a^b=c then a^c=b and b^c=a
 odd number & 1=1   even&1=0
+
+if(n&(n-1)==0) then n is a power of 2
 */
 
 
