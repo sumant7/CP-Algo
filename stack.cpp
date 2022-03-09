@@ -31,3 +31,9 @@ int main() {
 stack1.swap(stack2)  will swap all values of both stacks
 both stacks must be of same data type but can be of different size. Time O(n)
 */
+
+
+/*
+stack.emplace 
+While push() function inserts a copy of the value or the parameter passed to the function into the container at the top, the emplace() function constructs a new element as the value of the parameter and then adds it to the top of the container. 
+*/
