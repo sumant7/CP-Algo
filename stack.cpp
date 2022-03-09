@@ -25,3 +25,9 @@ int main() {
     }
     
 }
+
+//other functions
+/*
+stack1.swap(stack2)  will swap all values of both stacks
+both stacks must be of same data type but can be of different size. Time O(n)
+*/
