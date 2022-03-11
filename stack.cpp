@@ -89,3 +89,41 @@ vector<pair<ll,ll>> solve(vector<ll> a)  //returns [{element,nextlargest}]  !!! 
     }
     return v;
 }
+
+
+
+
+//smallest number on left
+vector<int> leftSmaller(int n, int a[]){
+        vector<int> v(n);
+        stack <int> s;
+        s.push(-1);
+        int i;
+        for(i=0;i<n;++i)
+        {
+            while(a[i]<=s.top() && s.top()!=-1) s.pop();
+            v[i]=s.top();
+            s.push(a[i]);
+        }
+        return v;
+    }
+
+
+
+//next smaller
+vector<int> help_classmate(vector<int> a, int n) 
+    { 
+        stack <int> s;
+        s.push(-1);
+        vector<int> ans(n);
+        for(int i=n-1;i>=0;i--)
+        {
+            while(s.top()>=a[i])
+            {
+                s.pop();
+            }
+            ans[i]=s.top();
+            s.push(a[i]);
+        }
+        return ans;
+    } 
