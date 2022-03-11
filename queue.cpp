@@ -44,3 +44,6 @@ int main(){
     }
     return 0;
 }
+
+
+//queue1.swap(queue2); and q.emplace work same as stack
