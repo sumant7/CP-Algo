@@ -127,3 +127,15 @@ vector<int> help_classmate(vector<int> a, int n)
         }
         return ans;
     } 
+
+
+//find minimum value in a stack in O(1)
+/*
+we actually make stack os pairs
+stack<pair<int, int>> st;
+int new_min = st.empty() ? new_elem : min(new_elem, st.top().second);
+st.push({new_elem, new_min});
+
+
+each element = {element, minimum of all elemtnts not above it}
+*/
