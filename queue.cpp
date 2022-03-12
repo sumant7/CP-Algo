@@ -35,7 +35,7 @@ int main(){
     prn(q.front()); //1
     prn(q.back()); //5
     prn(q.size()); //5
-    q.pop();
+    q.pop(); //removes at front
     prn(q.size()); //4
     while(!q.empty())
     {
