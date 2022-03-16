@@ -52,6 +52,7 @@ n= n ^ (1<<i)
 */
 
 
+//from c++14 and onwards   int a= 0b0101;   where a=0101 or 5
 
 
 //fint sum of all xor pairs in an array
