@@ -55,6 +55,8 @@ n= n ^ (1<<i)
 //from c++14 and onwards   int a= 0b0101;   where a=0101 or 5
 
 
+//bitwise ~    ~a= -a -1 for a>0   and ~(~a)=a
+
 //fint sum of all xor pairs in an array
 /*
 Consider ith bit is set in m out of n numbers.Then we can say that ith bit will be set in m*(n-m) pairwise XORs.So the final sum due to this ith bit will be 2^i*m*(n-m) (conversion of binary number to decimal)
