@@ -101,3 +101,16 @@ long long int msbPos(long long  n)
     }
     return msb_p;
 }
+
+
+
+//count total setbits Brian Kernighan's algo
+countsetbits(int n)
+{
+    int count=0;
+    while(n){
+        n=n&(n-1);
+        count++;
+    }
+    return count;
+}
