@@ -19,6 +19,9 @@ using namespace std;
 //floor(log2(n)+1)=ceil(log2(n))
 
 
+//use (a%b + b)%b over a%b to avoid negativr remainders
+
+
 //to find digits int the factorial of a number
 int digitsInFactorial(int N)
     {
