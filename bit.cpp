@@ -108,7 +108,7 @@ long long int msbPos(long long  n)
 
 
 //count total setbits Brian Kernighan's algo
-countsetbits(int n)
+countsetbit(int n)
 {
     int count=0;
     while(n){
