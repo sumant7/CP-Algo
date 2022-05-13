@@ -8,13 +8,14 @@
 #include <set>
 #include <unordered_set>
 #include <list>
+#define ll long long int
 
 using namespace std;
     
 //to search a number in an array with O(logN) complexity
-int binarysearch(int a[], int n, int k)    //k is the number to search
+ll binarysearch(ll a[], ll n, ll k)    //k is the number to search
 {
-        int l=0,r=n-1,mid;
+        ll l=0,r=n-1,mid;
         while(r>=l)
         {
             mid= l+(r-l)/2;
