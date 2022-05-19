@@ -84,7 +84,7 @@ long long int sum(int a[],int n)
 /*
 Consider i’th bit is set in m out of n numbers. Then we can say that i’th
 bit will be set in m*(n-m) pairwise XORs. So the final sum due to this i’th
-bit will be 2i * m * (n-m) (conversion of binary number to decimal)
+bit will be 2^i * m * (n-m) (conversion of binary number to decimal)
 All the elements are integers and we know that size of int is 32 bits, so if
 we do the above for all the bits 0<=i<32 and sum all the results we will
 have our final answer.

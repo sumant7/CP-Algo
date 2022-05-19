@@ -173,3 +173,13 @@ long long binpowr(long long a, long long b, long long m) {
     }
     return res;
 }
+
+
+
+
+//excel column number from title
+/*
+To convert CDA,
+3*26*26 + 4*26 + 1
+loop through string and result = 26*result + s[i] - 'A' + 1
+*/
